@@ -38,6 +38,7 @@ def download_webpage(url):
         response = None
     return response
 
+
 url = "https://www.python.org/events/python-events/"
 html = download_webpage(url)
 
