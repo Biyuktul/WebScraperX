@@ -39,7 +39,7 @@ def download_webpage(url):
                 time.sleep(5)
 
 
-url = "https://www.python.org/events/python-evnts/"
+url = "https://www.python.org/events/python-events/"
 html = download_webpage(url)
 
 if html:
