@@ -27,17 +27,16 @@ def download_webpage(url):
     """
     try:
         response = urlopen(url).read().decode("utf-8")
-        return response
     except Exception as e:
         print("Unexpected error occured\nRetrying...")
         for i in range(3):
             try:
                 response = urlopen(url).read().decode("utf-8")
-                return response
             except Exception as e:
                 print("Failed")
                 time.sleep(5)
-
+        response = None
+    return response
 
 url = "https://www.python.org/events/python-events/"
 html = download_webpage(url)
